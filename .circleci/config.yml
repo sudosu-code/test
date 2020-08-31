@@ -1,12 +1,11 @@
 version: 2.1
-
 jobs:
   build:
-    machine:
-      image: ubuntu-1604:201903-01
+    docker:
+      - image: alpine:3.7
     steps:
-      - checkout
       - run:
-        command: |
-          printenv
-          git branch
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
