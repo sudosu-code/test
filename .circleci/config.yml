@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          command: |-
+        command: |
           printenv
           git branch
-
