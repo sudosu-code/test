@@ -7,11 +7,11 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - tag/push
- jobs:
-   tag/push:
-     docker: bitnami/git:2.28.0-debian-10-r23
-     steps:
-     - run:
-         command: |-
-         printenv
-         git branch
+jobs:
+  tag/push:
+    docker: bitnami/git:2.28.0-debian-10-r23
+    steps:
+    - run:
+        command: |-
+          printenv
+          git branch
