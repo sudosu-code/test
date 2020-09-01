@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: circleci/python:3.8
     steps:
+      - checkout
       - add_ssh_keys:
           fingerprints:
           - "bd:c5:5b:2c:7f:a8:a3:56:fa:84:52:01:cd:22:3a:d2"
-      - checkout
       - run:
           name: The First Step
           command: |
