@@ -4,10 +4,11 @@ jobs:
     docker:
       - image: bitnami/git:2.28.0-debian-10-r23
     steps:
+      - 
       - run:
           name: The First Step
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             printenv
-            git branch
+            git clone ${CIRCLE_REPOSITORY_URL}
