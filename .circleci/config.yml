@@ -27,7 +27,7 @@ jobs:
             ls
             cat artifact.txt
             git add .
-            git commit –am '[ci skip] build artifacts'
+            git commit -m '[ci skip] build artifacts'
             git tag -a "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)" -m '[ci skip] tag with build artifacts'
             git branch
             git show "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)" 
