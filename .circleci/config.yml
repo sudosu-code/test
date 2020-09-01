@@ -21,7 +21,6 @@ jobs:
             ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
             ls
-            cd "${CIRCLE_PROJECT_REPONAME}"
             git branch
             git rev-parse HEAD
             git rev-parse --short HEAD
