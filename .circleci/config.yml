@@ -20,12 +20,12 @@ jobs:
             touch ~/.ssh/known_hosts
             ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-            ls
+            ls - ltr
             git branch
             git rev-parse HEAD
             git rev-parse --short HEAD
             echo "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)" > artifact.txt
-            ls
+            ls 
             cat artifact.txt
             git config --global user.email "you@example.com"
             git config --global user.name "${CIRCLE_PROJECT_USERNAME}"
