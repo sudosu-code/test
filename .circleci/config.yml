@@ -11,4 +11,4 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             printenv
-            git clone ${CIRCLE_REPOSITORY_URL}
+            git clone "${CIRCLE_REPOSITORY_URL}"
