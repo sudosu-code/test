@@ -11,4 +11,5 @@ jobs:
             echo 'This is the delivery pipeline'
             pwd
             ls
+            ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
             git clone "${CIRCLE_REPOSITORY_URL}"
