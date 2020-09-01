@@ -17,3 +17,6 @@ jobs:
             ssh-keyscan -p 443 ssh.github.com > ~/.ssh/known_hosts
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
             git clone "${CIRCLE_REPOSITORY_URL}"
+            ls
+            printenv
+            cd "${CIRCLE_PROJECT_REPONAME}"
