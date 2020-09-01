@@ -4,6 +4,9 @@ jobs:
     docker:
       - image: bitnami/git:2.28.0-debian-10-r23
     steps:
+      - add_ssh_keys:
+          fingerprints:
+          - "55:27:2f:d1:25:07:52:16:9e:a9:88:52:ad:ff:90:3e"
       - run:
           name: The First Step
           command: |
