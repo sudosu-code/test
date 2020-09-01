@@ -21,3 +21,6 @@ jobs:
             printenv
             cd "${CIRCLE_PROJECT_REPONAME}"
             git branch
+            git rev-parse HEAD
+            git rev-parse --short HEAD
+            git log --pretty=format:'%h' -n 1
