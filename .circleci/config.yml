@@ -20,3 +20,4 @@ jobs:
             ls
             printenv
             cd "${CIRCLE_PROJECT_REPONAME}"
+            git branch
