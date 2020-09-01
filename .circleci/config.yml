@@ -23,4 +23,10 @@ jobs:
             git branch
             git rev-parse HEAD
             git rev-parse --short HEAD
-            git log --pretty=format:'%h' -n 1
+            echo "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)" > artifact.txt
+            git add .
+            git commit –am "[ci skip] build artifacts"
+            git tag -a "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)" -m "[ci skip] tag with build artifacts"
+            git branch
+            git show "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)" 
+            git push origin "cb-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)"
