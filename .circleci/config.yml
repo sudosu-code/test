@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: bitnami/git:2.28.0-debian-10-r23
+      - image: alpine/git:v2.26.2
     steps:
       - run:
           name: The First Step
@@ -11,6 +11,7 @@ jobs:
             echo 'This is the delivery pipeline'
             pwd
             ls
+            uname -a
             mkdir -p ~/.ssh
             touch ~/.ssh/known_hosts
             ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
